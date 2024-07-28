@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "litestar-todo"
+version = "0.1.0"
+description = ""
+authors = ["crxwns"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+litestar = { extras = ["standard"], version = "^2.10.0" }
+msgspec = "^0.18.6"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["FA", "FBT001"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
